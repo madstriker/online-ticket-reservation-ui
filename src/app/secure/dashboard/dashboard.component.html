@@ -1,0 +1,30 @@
+<div class="row">
+
+
+    <div class="col-md-2">
+        <div class="card">
+            <div class="card__title">
+                Daily Metrics
+            </div>
+            <div class="card__body">
+                <div class="card__payment"> <span class="card__label">Total Payment</span> {{dashBoardDetailData?.totalDailyAmount || 0}}</div>
+                <div class="card__reserved"> <span class="card__label"> Total Reserved</span> {{dashBoardDetailData?.totalDailyReserved || 0}}</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-2">
+        <div class="card">
+            <div class="card__title">
+                Overall Metrics
+            </div>
+            <div class="card__body">
+                <div class="card__payment"> <span class="card__label">Total Payment</span> {{dashBoardDetailData?.totalOverallAmount || 0}}</div>
+                <div class="card__reserved"> <span class="card__label"> Total Reserved</span> {{dashBoardDetailData?.totalOverallReserved || 0}}</div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

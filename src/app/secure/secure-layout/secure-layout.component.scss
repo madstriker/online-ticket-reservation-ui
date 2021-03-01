@@ -1,0 +1,15 @@
+$menu-width: 20rem;
+.main-container {
+    display: flex;
+    color: black;
+}
+
+.menu-container {
+    width: $menu-width;
+    height: 100vh;
+}
+
+.router-container {
+    width: calc(100% - #{$menu-width});
+    height: 100vh;
+}

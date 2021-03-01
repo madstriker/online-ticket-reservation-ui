@@ -1,0 +1,34 @@
+<div>
+    <h2> Online Bus Ticket Reservation</h2>
+
+    <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Quantity</label>
+            <input formControlName="quantity" [class.is-invalid]=" reservationForm.get('quantity').invalid &&
+             reservationForm.get('quantity').touched" type="text" class="form-control">
+
+            <div *ngIf="  reservationForm.get('quantity').invalid && reservationForm.get('quantity').touched">
+                <small *ngIf="  reservationForm.get('quantity').errors?.required" class="text-danger">Quantity is required</small>
+                <small *ngIf=" reservationForm.get('quantity').errors?.pattern" class="text-danger">Quantity should be in number</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Travel Date</label>
+            <input formControlName="travelDate" [class.is-invalid]="reservationForm.get('travelDate').invalid &&
+             reservationForm.get('travelDate').touched" type="date" class="form-control">
+            <div *ngIf="  reservationForm.get('travelDate').invalid && reservationForm.get('travelDate').touched">
+                <small *ngIf="  reservationForm.get('travelDate').errors?.required" class="text-danger">Travel Date is required</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputState">location</label>
+            <select id="inputState" class="form-control" formControlName="locationId">
+              <option selected disabled>Choose...</option>
+              <ng-container *ngIf="locationList">
+                <option *ngFor="let location of locationList" [value]="location?.id">{{location?.location}}</option>
+            </ng-container>
+            </select>
+        </div>
+        <button type="submit" [disabled]="!reservationForm.valid" class="btn btn-primary" style="margin:5px;"> Reserved </button>
+    </form>
+</div>

@@ -1,0 +1,92 @@
+.page-container {
+    display: flex;
+    height: 100%;
+}
+
+.page-content-container {
+    padding: 50px;
+    width: 80%;
+    float: right;
+}
+
+.sidebar {
+    height: 100%;
+    width: 300px;
+    background: rgba(35, 42, 58);
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 10px 20px;
+    font-family: 'Open Sans';
+    cursor: pointer;
+}
+
+.list-item:hover {
+    color: white;
+}
+
+.list-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    left: 0;
+    background-color: pink;
+    opacity: 0;
+    transform: scaleY(0);
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.list-item:hover::before {
+    opacity: 0.5;
+    transform: scaleY(0.5);
+}
+
+.list-item.selected::before {
+    opacity: 1;
+    transform: scaleY(1) scaleX(2);
+}
+
+.list-item.selected {
+    background: orange;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fa-caret-down {
+    float: right;
+    color: brown;
+    padding-left: 164px;
+}
+
+.fa-caret-up {
+    float: right;
+    color: brown;
+    padding-left: 164px;
+}
+
+.list-items {
+    padding-top: 100px;
+}
+
+.menu-bar {
+    position: relative;
+    left: 55px;
+    font-size: 19px;
+}
+
+.menu-bar ul li a {
+    color: white;
+}
+
+.menu-bar ul li {
+    list-style: none;
+}

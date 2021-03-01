@@ -1,0 +1,28 @@
+    .card {
+        box-shadow: 0 0 2px 1px black;
+        width: max-content;
+        // padding: 5px;
+        margin: 10px;
+    }
+    
+    .card__title {
+        text-align: center;
+        padding: 5px;
+        margin-bottom: 5px;
+        font-weight: 700;
+        color: white;
+        background-color: blue;
+        border-bottom: 1px solid black;
+    }
+    
+    .card__body {
+        padding: 5px;
+    }
+    
+    .card__label {
+        font-weight: 500;
+    }
+    
+    .card__payment {}
+    
+    .card__reserved {}
